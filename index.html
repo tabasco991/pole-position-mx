@@ -810,7 +810,7 @@ for(let i=0;i<16;i++){const l=document.createElement('div');l.className='sl';l.s
 /* ============================================================
    TICKER
 ============================================================ */
-const tItems=['Kimi Antonelli · 72 PTS · LÍDER','George Russell · 63 PTS','Charles Leclerc · 52 PTS','Lewis Hamilton · 38 PTS','Lando Norris · 33 PTS','Carlos Sainz · 28 PTS','Max Verstappen · 12 PTS','Oscar Piastri · 23 PTS','Franco Colapinto 🇦🇷 · Alpine · ¡Vamos Argentina!','Nueva Era 2026 · Sin DRS · Aero Activa','Madrid GP · Septiembre 2026 · ¡DEBUT!','YouTube & Instagram · @polepositionmx','Suscríbete al canal de F1 en Español 🏎️'];
+const tItems=['Kimi Antonelli · 72 PTS · LÍDER','George Russell · 63 PTS','Charles Leclerc · 49 PTS','Lewis Hamilton · 41 PTS','Lando Norris · 25 PTS','Oscar Piastri · 21 PTS','Oliver Bearman · 17 PTS','Pierre Gasly · 15 PTS','Max Verstappen · 12 PTS','Liam Lawson · 10 PTS','Checo Pérez 🇲🇽 · Cadillac · ¡El regreso!','Franco Colapinto 🇦🇷 · Alpine · ¡Vamos Argentina!','Nueva Era 2026 · Sin DRS · Aero Activa','Madrid GP · Septiembre 2026 · ¡DEBUT!','YouTube & Instagram · @polepositionmxli','Suscríbete al canal de F1 en Español 🏎️'];
 const tickerEl=document.getElementById('ticker');
 const all=[...tItems,...tItems];
 tickerEl.innerHTML=all.map(t=>`<span class="ticker-item">${t} <span class="ticker-dot">◆</span></span>`).join('');
@@ -1917,7 +1917,7 @@ function openDriver(driverId) {
 const races=[
   {round:1,flag:'🇦🇺',id:'australia',name:'Australia',date:'6-8 Mar',winner:'G. Russell',team:'Mercedes',time:'1:23:06.801',p2:'K. Antonelli',p3:'C. Leclerc',done:true},
   {round:2,flag:'🇨🇳',id:'china',name:'China',date:'13-15 Mar',winner:'K. Antonelli',team:'Mercedes',time:'1:33:15.607',p2:'G. Russell',p3:'L. Hamilton',done:true,sprint:true},
-  {round:3,flag:'🇯🇵',id:'japon',name:'Japón',date:'27-29 Mar',winner:'K. Antonelli',team:'Mercedes',time:'1:28:43.512',p2:'C. Leclerc',p3:'L. Norris',done:true},
+  {round:3,flag:'🇯🇵',id:'japon',name:'Japón',date:'27-29 Mar',winner:'K. Antonelli',team:'Mercedes',time:'1:28:03.403',p2:'O. Piastri',p3:'C. Leclerc',done:true},
 ];
 const rGrid=document.getElementById('resultsGrid');
 races.forEach(r=>{
@@ -1945,26 +1945,26 @@ races.forEach(r=>{
 const drivers=[
   {pos:1,name:'Kimi Antonelli',id:'antonelli',team:'Mercedes',pts:72,color:'#27F4D2',nat:'🇮🇹'},
   {pos:2,name:'George Russell',id:'russell',team:'Mercedes',pts:63,color:'#27F4D2',nat:'🇬🇧'},
-  {pos:3,name:'Charles Leclerc',id:'leclerc',team:'Ferrari',pts:52,color:'#E8002D',nat:'🇲🇨'},
-  {pos:4,name:'Lewis Hamilton',id:'hamilton',team:'Ferrari',pts:38,color:'#E8002D',nat:'🇬🇧'},
-  {pos:5,name:'Lando Norris',id:'norris',team:'McLaren',pts:33,color:'#FF8000',nat:'🇬🇧'},
-  {pos:6,name:'Carlos Sainz',id:'sainz',team:'Williams',pts:28,color:'#64C4FF',nat:'🇪🇸'},
-  {pos:7,name:'Oscar Piastri',id:'piastri',team:'McLaren',pts:23,color:'#FF8000',nat:'🇦🇺'},
-  {pos:8,name:'Fernando Alonso',id:'alonso',team:'Aston Martin',pts:18,color:'#358C75',nat:'🇪🇸'},
+  {pos:3,name:'Charles Leclerc',id:'leclerc',team:'Ferrari',pts:49,color:'#E8002D',nat:'🇲🇨'},
+  {pos:4,name:'Lewis Hamilton',id:'hamilton',team:'Ferrari',pts:41,color:'#E8002D',nat:'🇬🇧'},
+  {pos:5,name:'Lando Norris',id:'norris',team:'McLaren',pts:25,color:'#FF8000',nat:'🇬🇧'},
+  {pos:6,name:'Oscar Piastri',id:'piastri',team:'McLaren',pts:21,color:'#FF8000',nat:'🇦🇺'},
+  {pos:7,name:'Oliver Bearman',id:'bearman',team:'Haas',pts:17,color:'#B6BABD',nat:'🇬🇧'},
+  {pos:8,name:'Pierre Gasly',id:'gasly',team:'Alpine',pts:15,color:'#0090FF',nat:'🇫🇷'},
   {pos:9,name:'Max Verstappen',id:'verstappen',team:'Red Bull',pts:12,color:'#3671C6',nat:'🇳🇱'},
-  {pos:10,name:'Isack Hadjar',id:'hadjar',team:'Red Bull',pts:8,color:'#3671C6',nat:'🇫🇷'},
-  {pos:11,name:'Lance Stroll',id:'stroll',team:'Aston Martin',pts:6,color:'#358C75',nat:'🇨🇦'},
-  {pos:12,name:'Alexander Albon',id:'albon',team:'Williams',pts:5,color:'#64C4FF',nat:'🇹🇭'},
-  {pos:13,name:'Nico Hülkenberg',id:'hulkenberg',team:'Audi',pts:4,color:'#C8AA6E',nat:'🇩🇪'},
-  {pos:14,name:'Pierre Gasly',id:'gasly',team:'Alpine',pts:3,color:'#0090FF',nat:'🇫🇷'},
-  {pos:15,name:'Gabriel Bortoleto',id:'bortoleto',team:'Audi',pts:2,color:'#C8AA6E',nat:'🇧🇷'},
-  {pos:16,name:'Oliver Bearman',id:'bearman',team:'Haas',pts:1,color:'#B6BABD',nat:'🇬🇧'},
-  {pos:17,name:'Franco Colapinto',id:'colapinto',team:'Alpine',pts:0,color:'#0090FF',nat:'🇦🇷'},
-  {pos:18,name:'Esteban Ocon',id:'ocon',team:'Haas',pts:0,color:'#B6BABD',nat:'🇫🇷'},
-  {pos:19,name:'Sergio Pérez',id:'perez',team:'Cadillac',pts:0,color:'#FFD700',nat:'🇲🇽',special:true},
-  {pos:20,name:'Valtteri Bottas',id:'bottas',team:'Cadillac',pts:0,color:'#FFD700',nat:'🇫🇮'},
-  {pos:21,name:'Yuki Tsunoda',id:'tsunoda',team:'Racing Bulls',pts:0,color:'#6692FF',nat:'🇯🇵'},
-  {pos:22,name:'Liam Lawson',id:'lawson',team:'Racing Bulls',pts:0,color:'#6692FF',nat:'🇳🇿'},
+  {pos:10,name:'Liam Lawson',id:'lawson',team:'Racing Bulls',pts:10,color:'#6692FF',nat:'🇳🇿'},
+  {pos:11,name:'Arvid Lindblad',id:'lindblad',team:'Racing Bulls',pts:4,color:'#6692FF',nat:'🇬🇧'},
+  {pos:12,name:'Isack Hadjar',id:'hadjar',team:'Red Bull',pts:4,color:'#3671C6',nat:'🇫🇷'},
+  {pos:13,name:'Gabriel Bortoleto',id:'bortoleto',team:'Audi',pts:2,color:'#C8AA6E',nat:'🇧🇷'},
+  {pos:14,name:'Carlos Sainz',id:'sainz',team:'Williams',pts:2,color:'#64C4FF',nat:'🇪🇸'},
+  {pos:15,name:'Franco Colapinto',id:'colapinto',team:'Alpine',pts:1,color:'#0090FF',nat:'🇦🇷'},
+  {pos:16,name:'Esteban Ocon',id:'ocon',team:'Haas',pts:1,color:'#B6BABD',nat:'🇫🇷'},
+  {pos:17,name:'Alexander Albon',id:'albon',team:'Williams',pts:0,color:'#64C4FF',nat:'🇹🇭'},
+  {pos:18,name:'Sergio Pérez',id:'perez',team:'Cadillac',pts:0,color:'#FFD700',nat:'🇲🇽',special:true},
+  {pos:19,name:'Lance Stroll',id:'stroll',team:'Aston Martin',pts:0,color:'#358C75',nat:'🇨🇦'},
+  {pos:20,name:'Fernando Alonso',id:'alonso',team:'Aston Martin',pts:0,color:'#358C75',nat:'🇪🇸'},
+  {pos:21,name:'Valtteri Bottas',id:'bottas',team:'Cadillac',pts:0,color:'#FFD700',nat:'🇫🇮'},
+  {pos:22,name:'Nico Hülkenberg',id:'hulkenberg',team:'Audi',pts:0,color:'#C8AA6E',nat:'🇩🇪'},
 ];
 const dGrid=document.getElementById('driversGrid');
 drivers.forEach(d=>{
